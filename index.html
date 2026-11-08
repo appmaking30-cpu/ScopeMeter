@@ -150,6 +150,7 @@ main{max-width:1600px;padding:38px clamp(18px,4vw,62px) 70px}
 .project{transition:transform .18s,border-color .18s,box-shadow .18s}
 .project:focus-within{outline:2px solid #a9cb8c;outline-offset:2px}
 #page-dashboard .stats{grid-template-columns:repeat(5,minmax(0,1fr))}
+.project-search{width:100%;margin:0 0 14px;padding:12px 14px;border:1px solid #dfe7dd;border-radius:11px;background:#fbfcfa;color:#25382b;font:inherit;font-size:13px;outline:none}.project-search:focus{border-color:#8eb66c;box-shadow:0 0 0 3px rgba(142,182,108,.14)}
 .invoice-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(100px,.7fr) minmax(100px,.7fr) auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #edf0eb}
 .invoice-row:last-child{border-bottom:0}
 .invoice-main strong{display:block;color:#293c30;font-size:13px}
@@ -227,7 +228,7 @@ main{max-width:1600px;padding:38px clamp(18px,4vw,62px) 70px}
 
   <section class="page" id="page-projects">
     <div class="topbar"><div><div class="eyebrow">YOUR WORK</div><h1>Projects</h1><p class="sub">A clear view of every fixed-fee job and retainer.</p></div><div class="actions"><button class="btn primary" id="newProjectPage">＋ New project</button></div></div>
-    <div class="panel"><div class="panel-head"><div><h2>All projects</h2><p class="panel-desc">Select a project to inspect its hours, costs and margin.</p></div><div class="filters" id="projectFilters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="risk">At risk</button><button class="filter" data-filter="over">Over budget</button><button class="filter" data-filter="healthy">Healthy</button></div></div><div class="project-list" id="allProjects"></div></div>
+    <div class="panel"><div class="panel-head"><div><h2>All projects</h2><p class="panel-desc">Select a project to inspect its hours, costs and margin.</p></div><div class="filters" id="projectFilters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="risk">At risk</button><button class="filter" data-filter="over">Over budget</button><button class="filter" data-filter="healthy">Healthy</button></div></div><input id="projectSearch" class="project-search" type="search" placeholder="Search projects or clients…" aria-label="Search projects or clients"><div class="project-list" id="allProjects"></div></div>
   </section>
 
   <section class="page" id="page-detail">
@@ -282,7 +283,7 @@ main{max-width:1600px;padding:38px clamp(18px,4vw,62px) 70px}
 <div class="toast" id="toast"></div>
 <script>
 const KEY='scopemeter_v2';
-let projects=[], currentProject=null, filterMode='all', editingId=null, timerState=null, tickHandle=null;
+let projects=[], currentProject=null, filterMode='all', editingId=null, timerState=null, tickHandle=null, projectQuery='';
 const $=id=>document.getElementById(id);
 const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Number(n)||0);
 const num=n=>Number(n||0);
@@ -304,7 +305,7 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 function filtered(mode){return projects.filter(p=>mode==='all'||status(p).key===mode)}
 function render(){renderStats();renderProjects();renderAlerts();renderTimerSelect();if(currentProject&&projects.some(p=>p.id===currentProject))renderDetail()}
 function renderStats(){const active=projects.length,fees=projects.reduce((a,p)=>a+totalFee(p),0),hours=projects.reduce((a,p)=>a+calc(p).hours,0),risk=projects.filter(p=>status(p).key!=='healthy').length;$('statActive').textContent=active;$('statFees').textContent=money(fees);$('statHours').textContent=hours.toFixed(1)+'h';$('statRisk').textContent=risk;$('statOutstanding').textContent=money(projects.reduce((n,p)=>n+invoiceTotals(p).outstanding,0))}
-function renderProjects(){const list=filtered(filterMode);$('dashboardProjects').innerHTML=list.length?list.slice(0,5).map(projectCard).join(''):empty('No projects in this view','Try another filter or create a project.');$('allProjects').innerHTML=list.length?list.map(projectCard).join(''):empty('No projects yet');}
+function renderProjects(){const list=filtered(filterMode),q=projectQuery.trim().toLowerCase(),visible=list.filter(p=>!q||[p.name,p.client,p.notes].some(v=>String(v||'').toLowerCase().includes(q)));$('dashboardProjects').innerHTML=list.length?list.slice(0,5).map(projectCard).join(''):empty('No projects in this view','Try another filter or create a project.');$('allProjects').innerHTML=visible.length?visible.map(projectCard).join(''):empty(q?'No matching projects':'No projects yet',q?'Try another project or client name.':'Create your first project to get started.');}
 function renderAlerts(){
  const items=[];
  projects.forEach(p=>{const c=calc(p),st=status(p);if(st.key!=='healthy')items.push({kind:'scope',priority:st.key==='over'?0:1,title:p.name+' — '+st.label,detail:c.hours.toFixed(1)+'h used of '+c.planned.toFixed(1)+'h planned ('+Math.round(c.used)+'%)'})});
@@ -382,6 +383,7 @@ $('timerStart').onclick=startTimer;$('timerStop').onclick=stopTimer;$('exportPro
 $('projectModal').addEventListener('click',e=>{if(e.target.id==='projectModal')closeModal('projectModal')});$('logModal').addEventListener('click',e=>{if(e.target.id==='logModal')closeModal('logModal')});document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));
 
 bindFilters('dashboardFilters');bindFilters('projectFilters');
+$('projectSearch').addEventListener('input',e=>{projectQuery=e.target.value;renderProjects()});
 $('newInvoice').onclick=openInvoice;
 $('invoiceModal').addEventListener('click',e=>{if(e.target.id==='invoiceModal')closeModal('invoiceModal')});
 $('invoiceForm').addEventListener('submit',e=>{e.preventDefault();const p=projects.find(x=>x.id===currentProject);if(!p)return;p.invoices=p.invoices||[];const ref=$('invoiceRef').value.trim();if(p.invoices.some(x=>x.ref.toLowerCase()===ref.toLowerCase())){toast('That invoice reference already exists in this project.');return}p.invoices.unshift({id:uid(),ref,amount:num($('invoiceAmount').value),issued:$('invoiceIssued').value,due:$('invoiceDue').value,note:$('invoiceNote').value.trim(),status:'sent'});save();closeModal('invoiceModal');renderInvoices();renderStats();toast('Invoice added to tracker')});
