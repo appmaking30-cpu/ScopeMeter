@@ -14,6 +14,8 @@ ScopeMeter is a mobile-friendly, local-first project economics tool for freelanc
 - **Quote Lab:** estimate a minimum quote from labor cost, direct expenses, uncertainty buffer and target profit margin
 - **Milestone roadmap:** add delivery checkpoints, due dates and completion tracking for each project
 - **Invoice tracker:** record invoice references, amounts and due dates; track paid, outstanding and overdue balances without processing payments
+- **Task board:** manage project tasks across To do, In progress and Done, with priority, due dates, notes and hour estimates
+- **Client directory:** roll up projects, fees, outstanding invoices, logged hours, average margin and open tasks by client
 - Portfolio-level outstanding-invoice visibility
 - JSON backup and restore
 - Responsive layout and basic offline caching as a progressive web app
