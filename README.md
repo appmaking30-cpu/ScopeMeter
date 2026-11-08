@@ -13,12 +13,12 @@ ScopeMeter is a mobile-friendly, local-first project economics tool for freelanc
 - **Scope Guard:** record out-of-scope requests, estimate extra hours and fees, track pending/approved/declined decisions, and print a client-facing change-order sheet
 - **Quote Lab:** estimate a minimum quote from labor cost, direct expenses, uncertainty buffer and target profit margin
 - **Milestone roadmap:** add delivery checkpoints, due dates and completion tracking for each project
-- **Invoice tracker:** record invoice references, amounts and due dates; track paid, outstanding and overdue balances without processing payments
+- **Invoice Studio:** create client-ready invoices with line descriptions, tax, discounts, due dates and payment instructions; print or save as PDF; record partial payments with dates, methods and references; track remaining and overdue balances without processing payments
 - **Task board:** manage project tasks across To do, In progress and Done, with priority, due dates, notes and hour estimates
 - **Client directory:** roll up projects, fees, outstanding invoices, logged hours, average margin and open tasks by client
 - **Project starter kits:** create a ready-to-edit task board and milestone plan for website builds, brand identity, marketing campaigns or consulting sprints
 - **Proposal Studio:** draft client-ready proposals with scope, deliverables, exclusions, pricing, timeline, payment schedule and terms; track draft/sent/accepted/declined status and print or save as PDF
-- Portfolio-level outstanding-invoice visibility
+- **Financial intelligence:** portfolio-level billed revenue, cash collected, outstanding and overdue receivables, estimated project costs/profit, six-month invoice/payment trend and a due-date-sorted receivables ledger
 - JSON backup and restore
 - Responsive layout and basic offline caching as a progressive web app
 
@@ -47,4 +47,4 @@ Project records are stored in browser local storage on the device where you use 
 
 ## Roadmap
 
-Potential later work: encrypted cloud sync, user accounts, team collaboration, client portals, invoice PDF templates and payment integrations. Add these only after validating demand, security requirements and feasible payment-provider availability. Add these only after validating demand, security requirements and feasible payment-provider availability.
+Potential later work: encrypted cloud sync, user accounts, team collaboration, client portals, automated invoice delivery and payment integrations. These require backend infrastructure, security review and a payment provider that supports the business's country. The current invoice PDF is generated through the browser print dialog; ScopeMeter does not send invoices or process payments.
