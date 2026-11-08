@@ -22,9 +22,8 @@ Open `index.html` in a modern browser. For service-worker/offline support, serve
 ## Deploy with GitHub Pages
 
 1. Open repository **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select **main** and **/(root)**, then Save.
-4. Wait for GitHub Pages to publish the site.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+3. The included deployment workflow will publish the site on the next push to `main` (or when manually run from the Actions tab).
 
 The repository is public, so the published site and source are public too. Do not put real client names, confidential project details, passwords, API keys or private data in the repository.
 
