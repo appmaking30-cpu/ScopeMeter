@@ -12,6 +12,9 @@ ScopeMeter is a mobile-friendly, local-first project economics tool for freelanc
 - Direct expense tracking, CSV exports and printable reports
 - **Scope Guard:** record out-of-scope requests, estimate extra hours and fees, track pending/approved/declined decisions, and print a client-facing change-order sheet
 - **Quote Lab:** estimate a minimum quote from labor cost, direct expenses, uncertainty buffer and target profit margin
+- **Milestone roadmap:** add delivery checkpoints, due dates and completion tracking for each project
+- **Invoice tracker:** record invoice references, amounts and due dates; track paid, outstanding and overdue balances without processing payments
+- Portfolio-level outstanding-invoice visibility
 - JSON backup and restore
 - Responsive layout and basic offline caching as a progressive web app
 
@@ -40,4 +43,4 @@ Project records are stored in browser local storage on the device where you use 
 
 ## Roadmap
 
-Potential later work: encrypted cloud sync, user accounts, team collaboration, milestone/revision tracking, client portals and payment integrations. Add these only after validating demand, security requirements and feasible payment-provider availability.
+Potential later work: encrypted cloud sync, user accounts, team collaboration, client portals, invoice PDF templates and payment integrations. Add these only after validating demand, security requirements and feasible payment-provider availability. Add these only after validating demand, security requirements and feasible payment-provider availability.
