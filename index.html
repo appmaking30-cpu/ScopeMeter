@@ -48,6 +48,98 @@ main{padding:34px clamp(18px,4vw,54px) 60px;max-width:1500px;width:100%;margin:0
 .backup-actions{display:flex;gap:8px;flex-wrap:wrap}
 @media(max-width:720px){.scope-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quote-layout{grid-template-columns:1fr}}
 
+
+/* ScopeMeter Studio — premium visual refresh */
+:root{--bg:#f3f5f2;--panel:#ffffff;--panel2:#f7f9f6;--line:#e4e9e3;--muted:#738078;--text:#17251e;--blue:#315d48;--cyan:#a8d66d;--green:#4f9b69;--amber:#c68b36;--red:#c65d62;--shadow:0 14px 40px rgba(25,45,32,.055)}
+body{background:#f3f5f2;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.01em}
+.shell{grid-template-columns:252px minmax(0,1fr);background:var(--bg)}
+.sidebar{background:#14231c;border:0;color:#edf4ed;padding:28px 18px;box-shadow:8px 0 30px rgba(16,35,25,.06)}
+.brand{font-size:20px;color:#f5f8f4;padding-bottom:42px;letter-spacing:-.8px}
+.brand-mark{background:linear-gradient(145deg,#d4f29a,#8fbd62);color:#18301f;border-radius:12px;box-shadow:0 8px 24px rgba(168,214,109,.18)}
+.nav-label{color:#84988b;letter-spacing:1.9px}
+.nav button{color:#a9b9ad;border-radius:10px;padding:12px 13px;transition:all .18s}
+.nav button.active,.nav button:hover{background:#263a2e;color:#e8f5d8}
+.nav button.active{box-shadow:inset 3px 0 #b5df7c}
+.free-note{background:#1d3327;border:1px solid #35513e;color:#b5c6b9;border-radius:14px;line-height:1.6}
+.free-note strong{color:#e9f5df}
+main{max-width:1600px;padding:38px clamp(18px,4vw,62px) 70px}
+.eyebrow{color:#5d8b48;letter-spacing:2px;font-size:10px}
+.topbar{margin-bottom:28px}
+.topbar h1{font-size:clamp(29px,3.2vw,39px);letter-spacing:-1.5px;font-weight:760;color:#17251e}
+.sub{color:#7b8980;font-size:14px}
+.btn{background:#fff;color:#34453a;border:1px solid #e0e7df;border-radius:10px;box-shadow:0 2px 5px rgba(20,40,26,.025);padding:10px 15px}
+.btn:hover{transform:translateY(-1px);border-color:#b7c8b5;box-shadow:0 7px 18px rgba(25,55,32,.07)}
+.btn.primary{background:#203c2c;color:#f4f8ee;border:1px solid #203c2c;box-shadow:0 7px 18px rgba(32,60,44,.16)}
+.btn.primary:hover{background:#315b40;border-color:#315b40}
+.btn.ghost{background:transparent;box-shadow:none}
+.btn.danger{background:#fff5f4;color:#b64e51;border-color:#f1d8d6}
+.stat,.panel{background:#fff;border:1px solid #e7ece6;border-radius:17px;box-shadow:0 8px 30px rgba(30,55,36,.035)}
+.stat{padding:20px 21px;position:relative;overflow:hidden}
+.stat:after{content:"";position:absolute;right:-22px;top:-27px;width:84px;height:84px;border-radius:50%;background:#f0f6eb}
+.stat-head{color:#75847a;position:relative;z-index:1}
+.stat-icon{background:#edf4e8;color:#4c7544;border-radius:10px;position:relative;z-index:1}
+.stat-value{color:#1b2c21;font-size:30px;letter-spacing:-1.3px;position:relative;z-index:1}
+.stat-foot{color:#8a978e}
+.panel{padding:22px}
+.panel h2{font-size:16px;color:#1b2d21;letter-spacing:-.4px}
+.panel-desc{color:#8a978e}
+.project{background:#fbfcfa;border:1px solid #e7ece6;border-radius:13px;padding:16px}
+.project:hover{border-color:#b7caa9;box-shadow:0 9px 22px rgba(31,65,38,.06)}
+.project-name{color:#1b2c21;font-size:14px}
+.project-client{color:#87948a}
+.project-bottom{color:#849188}
+.project-bottom strong{color:#2b3e31}
+.pill{background:#eef3ed;color:#54734e}
+.pill.good{background:#edf6e9;color:#4f8a4d}
+.pill.warn{background:#fbf3e5;color:#a47731}
+.pill.bad{background:#faeded;color:#b44d55}
+.progress-meta{color:#849188}
+.bar{background:#edf1eb;height:6px}
+.bar span{background:linear-gradient(90deg,#8ebc65,#c2df86)}
+.timer-box{background:linear-gradient(145deg,#203d2d,#31563d);border:1px solid #365d41;border-radius:15px;box-shadow:0 12px 24px rgba(28,61,40,.12)}
+.timer-label{color:#c9dfbd}
+.timer-display{color:#f5f9ef;font-size:36px}
+.timer-select{background:#f9fbf7!important;color:#25382b!important;border-color:#dce7d9!important}
+.alert{background:#f7f8f5;border:1px solid #edf0eb}
+.alert strong{color:#334439}
+.alert span{color:#849188}
+.empty{border-color:#dce5d9;color:#849188}
+.empty strong{color:#34483a}
+.log-table th,.log-table td{border-bottom:1px solid #edf0eb}
+.log-table th{color:#849188}
+.log-table td{color:#344439}
+.metric{background:#f7f9f6;border:1px solid #e8eee6;border-radius:12px}
+.metric label{color:#819087}
+.metric strong{color:#263a2c}
+.field label{color:#596a5e}
+.field input,.field select,.field textarea{background:#fbfcfa;color:#25382b;border-color:#dfe7dd;border-radius:10px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#8eb66c;box-shadow:0 0 0 3px rgba(142,182,108,.14)}
+.modal-backdrop{background:rgba(15,30,20,.48);backdrop-filter:blur(7px)}
+.modal{background:#fff;border:1px solid #e5ece3;border-radius:19px;box-shadow:0 28px 90px rgba(18,40,24,.2)}
+.modal h2{color:#1d3023}
+.modal p{color:#829087}
+.scope-item{background:#fbfcfa;border-color:#e5ece3}
+.scope-desc{color:#69786d}
+.quote-main{background:linear-gradient(140deg,#203d2d,#426344);border:1px solid #476b48}
+.quote-main strong{color:#f6faef}
+.quote-breakdown div{border-color:#edf0eb}
+.quote-breakdown span{color:#829087}
+.toast{background:#1d3828;color:#f5f8ef;border:1px solid #36553c}
+.footer-note,.tiny{color:#8b978e}
+.milestone-card{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1px solid #e8eee6;background:#fbfcfa;border-radius:12px;margin-top:9px}
+.milestone-card.done{opacity:.72}
+.milestone-check{width:22px;height:22px;border:1.5px solid #bdcbbb;border-radius:7px;display:grid;place-items:center;flex:none;background:#fff;color:#fff;font-size:13px}
+.milestone-card.done .milestone-check{background:#54824b;border-color:#54824b}
+.milestone-copy{min-width:0;flex:1}
+.milestone-copy strong{display:block;font-size:13px;color:#2a3d30}
+.milestone-copy small{display:block;color:#8a978e;font-size:11px;margin-top:2px}
+.milestone-overdue{color:#b64e51!important}
+.milestone-tools{display:flex;gap:6px;align-items:center}
+.milestone-progress{height:7px;background:#edf1eb;border-radius:99px;overflow:hidden;margin:12px 0 4px}
+.milestone-progress span{display:block;height:100%;background:linear-gradient(90deg,#83ad61,#b9d985);border-radius:99px}
+@media(max-width:720px){.shell{display:block}.sidebar{background:#14231c;padding:10px 12px}.brand{padding:0;font-size:17px}.nav button.active{box-shadow:inset 0 -2px #b5df7c}.nav button{padding:9px 10px}.nav button span:last-child{display:none}main{padding:22px 14px 45px}.topbar h1{font-size:29px}.panel{padding:16px}.stat{padding:14px}.stat-value{font-size:24px}.milestone-card{padding:11px}.milestone-tools .btn{padding:6px 8px}}
+@media(min-width:721px){.sidebar{position:sticky;top:0;height:100vh}}
+
 </style>
 </head>
 <body>
@@ -118,6 +210,7 @@ main{padding:34px clamp(18px,4vw,54px) 60px;max-width:1500px;width:100%;margin:0
       <div class="panel"><div class="panel-head"><div><h2>Budget health</h2><p class="panel-desc">How much of the planned time has been used.</p></div></div><div id="budgetHealth"></div><div class="section-gap"><button class="btn small" id="detailLog">＋ Add work entry</button> <button class="btn small danger" id="deleteProject">Delete project</button></div></div>
     </div>
   
+<div class="panel section-gap"><div class="panel-head"><div><h2>Milestone roadmap</h2><p class="panel-desc">Turn the project into clear, trackable delivery steps.</p></div><button class="btn primary small" id="newMilestone">＋ Add milestone</button></div><div id="milestoneProgress"></div><div id="milestoneList"></div></div>
 <div class="panel section-gap"><div class="panel-head"><div><h2>Scope Guard</h2><p class="panel-desc">Record extra requests, price them and track approval before adding work.</p></div><button class="btn primary small" id="newChange">＋ New change request</button></div><div class="scope-grid" id="scopeSummary"></div><div id="scopeList"></div></div>
 </section>
 
@@ -154,6 +247,7 @@ main{padding:34px clamp(18px,4vw,54px) 60px;max-width:1500px;width:100%;margin:0
 </div><div class="modal-actions"><button type="button" class="btn" data-close="logModal">Cancel</button><button type="submit" class="btn primary">Save entry</button></div></form></div></div>
 
 <div class="modal-backdrop" id="changeModal"><div class="modal"><h2>Record a scope change</h2><p>Document the additional work and proposed fee before doing it.</p><form id="changeForm"><div class="form-grid"><div class="field full"><label>Change title *</label><input id="changeTitle" maxlength="100" required placeholder="e.g. Add a second landing page"></div><div class="field full"><label>What changed?</label><textarea id="changeDescription" rows="3" maxlength="700" placeholder="Describe the new request and why it is outside the original scope."></textarea></div><div class="field"><label>Additional hours *</label><input id="changeHours" type="number" min=".1" step=".1" required value="1"></div><div class="field"><label>Additional fee ($) *</label><input id="changeFee" type="number" min="0" step=".01" required value="0"></div></div><div class="modal-actions"><button type="button" class="btn" data-close="changeModal">Cancel</button><button type="submit" class="btn primary">Save request</button></div></form></div></div>
+<div class="modal-backdrop" id="milestoneModal"><div class="modal"><h2>Add a milestone</h2><p>Give the project a concrete next checkpoint.</p><form id="milestoneForm"><div class="form-grid"><div class="field full"><label>Milestone name *</label><input id="milestoneTitle" maxlength="100" required placeholder="e.g. Approve homepage direction"></div><div class="field"><label>Target date</label><input id="milestoneDate" type="date"></div></div><div class="modal-actions"><button type="button" class="btn" data-close="milestoneModal">Cancel</button><button type="submit" class="btn primary">Save milestone</button></div></form></div></div>
 <div class="toast" id="toast"></div>
 <script>
 const KEY='scopemeter_v2';
@@ -168,7 +262,7 @@ function sample(){return [
 {id:'demo2',name:'Brand identity package',client:'Morrow Coffee',type:'fixed',fee:1800,planned:32,rate:28,expenses:45,start:'2026-10-25',end:'2026-11-18',notes:'Identity, mini brand guide and social assets.',logs:[{id:uid(),date:'2026-10-27',hours:7,expense:0,task:'Research and concepts'},{id:uid(),date:'2026-11-02',hours:8,expense:45,task:'Logo refinement'}]},
 {id:'demo3',name:'Monthly website care',client:'Atlas Dental',type:'retainer',fee:650,planned:12,rate:30,expenses:0,start:'2026-11-01',end:'2026-11-30',notes:'Monthly maintenance retainer.',logs:[{id:uid(),date:'2026-11-03',hours:3,expense:0,task:'Updates and backups'}]}
 ]}
-function load(){try{const raw=localStorage.getItem(KEY)||localStorage.getItem('scopemeter_v1');projects=raw?JSON.parse(raw):sample();projects=projects.map(p=>({...p,logs:Array.isArray(p.logs)?p.logs:[],changes:Array.isArray(p.changes)?p.changes:[]}))}catch(e){projects=sample()}save()}
+function load(){try{const raw=localStorage.getItem(KEY)||localStorage.getItem('scopemeter_v1');projects=raw?JSON.parse(raw):sample();projects=projects.map(p=>({...p,logs:Array.isArray(p.logs)?p.logs:[],changes:Array.isArray(p.changes)?p.changes:[],milestones:Array.isArray(p.milestones)?p.milestones:[]}))}catch(e){projects=sample()}save()}
 function save(){localStorage.setItem(KEY,JSON.stringify(projects))}
 function calc(p){const logs=p.logs||[],hours=logs.reduce((a,x)=>a+num(x.hours),0),extra=logs.reduce((a,x)=>a+num(x.expense),0),labor=hours*num(p.rate),cost=labor+num(p.expenses)+extra,fee=totalFee(p),planned=totalPlanned(p),profit=fee-cost,margin=fee?profit/fee*100:0,used=planned?hours/planned*100:0,remaining=planned-hours,eff=hours?fee/hours:0;let projected=profit;if(hours>0&&planned>0){const projectedLabor=(hours/Math.max(1,used/100))*num(p.rate);projected=fee-(projectedLabor+num(p.expenses)+extra)}return{hours,extra,labor,cost,profit,margin,used,remaining,eff,projected,projectedMargin:fee?projected/fee*100:0,planned}}
 function status(p){const c=calc(p);if(c.used>=100)return{key:'over',label:'Over budget',class:'bad'};if(c.used>=85)return{key:'risk',label:'At risk',class:'warn'};return{key:'healthy',label:'On track',class:'good'}}
@@ -184,7 +278,7 @@ function renderAlerts(){const arr=projects.map(p=>({p,c:calc(p),s:status(p)})).f
 function renderTimerSelect(){const select=$('timerProject'),old=select.value;select.innerHTML=projects.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')||'<option value="">Create a project first</option>';if(projects.some(p=>p.id===old))select.value=old}
 function showPage(name){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$('page-'+name).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===name));window.scrollTo(0,0)}
 function openProject(id){currentProject=id;renderDetail();showPage('detail')}
-function renderDetail(){const p=projects.find(x=>x.id===currentProject);if(!p)return;renderScopeGuard();const c=calc(p),st=status(p);$('detailName').textContent=p.name;$('detailClient').textContent=(p.client||'No client')+' · '+(p.type==='retainer'?'Monthly retainer':'Fixed fee');$('detailStatus').textContent=st.label;$('detailStatus').className='pill '+st.class;$('detailDates').textContent=[p.start?'Started '+p.start:'',p.end?'Target end '+p.end:''].filter(Boolean).join(' · ')||'No dates set';$('detailMetrics').innerHTML=[['Agreed fee',money(totalFee(p))],['Hours logged',c.hours.toFixed(1)+'h'],['Labor + expenses',money(c.cost)],['Current margin',c.margin.toFixed(1)+'%']].map(x=>`<div class="metric"><label>${x[0]}</label><strong>${x[1]}</strong></div>`).join('');const logs=[...(p.logs||[])].sort((a,b)=>b.date.localeCompare(a.date));$('workTable').innerHTML=logs.length?`<table class="log-table"><thead><tr><th>Date</th><th>Task</th><th>Hours</th><th>Expense</th><th></th></tr></thead><tbody>${logs.map(l=>`<tr><td>${l.date}</td><td>${esc(l.task||'Work entry')}</td><td>${num(l.hours).toFixed(2)}h</td><td>${money(l.expense)}</td><td><button class="btn small danger" data-remove-log="${l.id}">×</button></td></tr>`).join('')}</tbody></table>`:empty('No work logged','Add your first time entry to see the project economics.');$('budgetHealth').innerHTML=`<div class="progress-meta"><span>Time budget used</span><strong>${Math.round(c.used)}%</strong></div><div class="bar"><span class="${st.class==='warn'?'warn':st.class==='bad'?'bad':''}" style="width:${Math.min(100,c.used)}%"></span></div><div class="project-bottom"><span>${c.remaining>=0?c.remaining.toFixed(1)+'h remaining':Math.abs(c.remaining).toFixed(1)+'h over'}</span><strong>${money(c.projected)} projected profit</strong></div><div class="alert section-gap"><i class="alert-dot ${st.key==='over'?'red':''}"></i><div><strong>${st.key==='healthy'?'Within planned hours':st.key==='risk'?'Scope warning':'Time budget exceeded'}</strong><span>${c.used>=100?'The logged hours have passed the original estimate. Review the remaining scope and any change requests.':c.used>=85?'You have used most of the planned hours. Review remaining tasks before continuing.':'You still have room in the planned time budget.'}</span></div></div><p class="tiny section-gap">${esc(p.notes||'No project notes added.')}</p>`}
+function renderDetail(){const p=projects.find(x=>x.id===currentProject);if(!p)return;renderScopeGuard();renderMilestones();const c=calc(p),st=status(p);$('detailName').textContent=p.name;$('detailClient').textContent=(p.client||'No client')+' · '+(p.type==='retainer'?'Monthly retainer':'Fixed fee');$('detailStatus').textContent=st.label;$('detailStatus').className='pill '+st.class;$('detailDates').textContent=[p.start?'Started '+p.start:'',p.end?'Target end '+p.end:''].filter(Boolean).join(' · ')||'No dates set';$('detailMetrics').innerHTML=[['Agreed fee',money(totalFee(p))],['Hours logged',c.hours.toFixed(1)+'h'],['Labor + expenses',money(c.cost)],['Current margin',c.margin.toFixed(1)+'%']].map(x=>`<div class="metric"><label>${x[0]}</label><strong>${x[1]}</strong></div>`).join('');const logs=[...(p.logs||[])].sort((a,b)=>b.date.localeCompare(a.date));$('workTable').innerHTML=logs.length?`<table class="log-table"><thead><tr><th>Date</th><th>Task</th><th>Hours</th><th>Expense</th><th></th></tr></thead><tbody>${logs.map(l=>`<tr><td>${l.date}</td><td>${esc(l.task||'Work entry')}</td><td>${num(l.hours).toFixed(2)}h</td><td>${money(l.expense)}</td><td><button class="btn small danger" data-remove-log="${l.id}">×</button></td></tr>`).join('')}</tbody></table>`:empty('No work logged','Add your first time entry to see the project economics.');$('budgetHealth').innerHTML=`<div class="progress-meta"><span>Time budget used</span><strong>${Math.round(c.used)}%</strong></div><div class="bar"><span class="${st.class==='warn'?'warn':st.class==='bad'?'bad':''}" style="width:${Math.min(100,c.used)}%"></span></div><div class="project-bottom"><span>${c.remaining>=0?c.remaining.toFixed(1)+'h remaining':Math.abs(c.remaining).toFixed(1)+'h over'}</span><strong>${money(c.projected)} projected profit</strong></div><div class="alert section-gap"><i class="alert-dot ${st.key==='over'?'red':''}"></i><div><strong>${st.key==='healthy'?'Within planned hours':st.key==='risk'?'Scope warning':'Time budget exceeded'}</strong><span>${c.used>=100?'The logged hours have passed the original estimate. Review the remaining scope and any change requests.':c.used>=85?'You have used most of the planned hours. Review remaining tasks before continuing.':'You still have room in the planned time budget.'}</span></div></div><p class="tiny section-gap">${esc(p.notes||'No project notes added.')}</p>`}
 function openModal(id){$(id).classList.add('show')}function closeModal(id){$(id).classList.remove('show')}
 function newProject(){editingId=null;$('projectForm').reset();$('pRate').value=25;$('pExpense').value=0;$('pStart').value=today();$('projectModalTitle').textContent='Create a project';openModal('projectModal')}
 function editProject(){const p=projects.find(x=>x.id===currentProject);if(!p)return;editingId=p.id;$('projectModalTitle').textContent='Edit project';$('pName').value=p.name;$('pClient').value=p.client||'';$('pType').value=p.type;$('pFee').value=p.fee;$('pHours').value=p.planned;$('pRate').value=p.rate;$('pExpense').value=p.expenses;$('pStart').value=p.start||'';$('pEnd').value=p.end||'';$('pNotes').value=p.notes||'';openModal('projectModal')}
@@ -206,6 +300,14 @@ function renderReports(){const fees=projects.reduce((a,p)=>a+totalFee(p),0),cost
 function approvedChanges(p){return (p.changes||[]).filter(x=>x.status==='approved')}
 function totalPlanned(p){return num(p.planned)+approvedChanges(p).reduce((a,x)=>a+num(x.hours),0)}
 function totalFee(p){return num(p.fee)+approvedChanges(p).reduce((a,x)=>a+num(x.fee),0)}
+function renderMilestones(){
+ const p=projects.find(x=>x.id===currentProject);if(!p)return;p.milestones=p.milestones||[];
+ const items=[...p.milestones].sort((a,b)=>(a.done===b.done?String(a.due||'9999').localeCompare(String(b.due||'9999')):a.done?1:-1));
+ const done=items.filter(x=>x.done).length,pct=items.length?Math.round(done/items.length*100):0;
+ $('milestoneProgress').innerHTML=items.length?'<div class="progress-meta"><span>'+done+' of '+items.length+' milestones complete</span><strong>'+pct+'%</strong></div><div class="milestone-progress"><span style="width:'+pct+'%"></span></div>':'<p class="tiny">No milestones yet. Add delivery checkpoints to make progress visible.</p>';
+ $('milestoneList').innerHTML=items.length?items.map(x=>{const overdue=!x.done&&x.due&&x.due<today();return '<div class="milestone-card '+(x.done?'done':'')+'"><button class="milestone-check" data-toggle-milestone="'+x.id+'" aria-label="'+(x.done?'Mark incomplete':'Mark complete')+'">'+(x.done?'✓':'')+'</button><div class="milestone-copy"><strong>'+esc(x.title)+'</strong><small class="'+(overdue?'milestone-overdue':'')+'">'+(x.done?'Completed':x.due?(overdue?'Overdue · ':'Due · ')+esc(x.due):'No due date')+'</small></div><div class="milestone-tools"><button class="btn small danger" data-delete-milestone="'+x.id+'" aria-label="Delete milestone">×</button></div></div>'}).join(''):'<div class="empty" style="padding:20px"><strong>Your roadmap starts here</strong><span>Add the first milestone to plan the delivery.</span></div>';
+}
+function openMilestone(){ $('milestoneForm').reset();$('milestoneDate').value='';openModal('milestoneModal') }
 function renderScopeGuard(){
  const p=projects.find(x=>x.id===currentProject);if(!p)return;const items=p.changes||[],approved=approvedChanges(p);
  $('scopeSummary').innerHTML=[['Requests',items.length],['Awaiting approval',items.filter(x=>x.status==='pending').length],['Approved extra fees',money(approved.reduce((a,x)=>a+num(x.fee),0))],['Approved extra hours',approved.reduce((a,x)=>a+num(x.hours),0).toFixed(1)+'h']].map(x=>'<div class="metric"><label>'+x[0]+'</label><strong>'+x[1]+'</strong></div>').join('');
@@ -234,6 +336,10 @@ $('timerStart').onclick=startTimer;$('timerStop').onclick=stopTimer;$('exportPro
 $('projectModal').addEventListener('click',e=>{if(e.target.id==='projectModal')closeModal('projectModal')});$('logModal').addEventListener('click',e=>{if(e.target.id==='logModal')closeModal('logModal')});document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeModal(b.dataset.close));
 
 bindFilters('dashboardFilters');bindFilters('projectFilters');
+$('newMilestone').onclick=openMilestone;
+$('milestoneModal').addEventListener('click',e=>{if(e.target.id==='milestoneModal')closeModal('milestoneModal')});
+$('milestoneForm').addEventListener('submit',e=>{e.preventDefault();const p=projects.find(x=>x.id===currentProject);if(!p)return;p.milestones=p.milestones||[];p.milestones.push({id:uid(),title:$('milestoneTitle').value.trim(),due:$('milestoneDate').value,done:false,created:today()});save();closeModal('milestoneModal');renderMilestones();toast('Milestone added to roadmap')});
+$('milestoneList').addEventListener('click',e=>{const t=e.target.closest('[data-toggle-milestone]'),d=e.target.closest('[data-delete-milestone]');const p=projects.find(x=>x.id===currentProject);if(!p)return;const id=t?.dataset.toggleMilestone||d?.dataset.deleteMilestone;if(!id)return;const item=(p.milestones||[]).find(x=>x.id===id);if(!item)return;if(t){item.done=!item.done;item.completed=item.done?today():'';toast(item.done?'Milestone completed':'Milestone reopened')}else{p.milestones=p.milestones.filter(x=>x.id!==id);toast('Milestone removed')}save();renderMilestones()});
 $('newChange').onclick=openChangeRequest;
 $('changeModal').addEventListener('click',e=>{if(e.target.id==='changeModal')closeModal('changeModal')});
 $('changeForm').addEventListener('submit',e=>{e.preventDefault();const p=projects.find(x=>x.id===currentProject);if(!p)return;p.changes=p.changes||[];p.changes.unshift({id:uid(),title:$('changeTitle').value.trim(),description:$('changeDescription').value.trim(),hours:num($('changeHours').value),fee:num($('changeFee').value),status:'pending',created:today()});save();closeModal('changeModal');render();renderScopeGuard();toast('Change request saved — awaiting approval')});
