@@ -17,6 +17,7 @@ ScopeMeter is a mobile-friendly, local-first project economics tool for freelanc
 - **Task board:** manage project tasks across To do, In progress and Done, with priority, due dates, notes and hour estimates
 - **Client directory:** roll up projects, fees, outstanding invoices, logged hours, average margin and open tasks by client
 - **Project starter kits:** create a ready-to-edit task board and milestone plan for website builds, brand identity, marketing campaigns or consulting sprints
+- **Proposal Studio:** draft client-ready proposals with scope, deliverables, exclusions, pricing, timeline, payment schedule and terms; track draft/sent/accepted/declined status and print or save as PDF
 - Portfolio-level outstanding-invoice visibility
 - JSON backup and restore
 - Responsive layout and basic offline caching as a progressive web app
